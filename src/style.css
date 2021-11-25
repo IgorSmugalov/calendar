@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(175, 182, 184);
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Рамки вокруг блоков */
+/* div {
+  border: 1px solid black !important;
+} */
+
+.calendar-container {
+  width: 560px;
+  height: 563px;
+  padding: 72px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(170, 170, 170, 0.03);
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Месяцы */
+.month-selector {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrows {
+  display: flex;
+}
+
+.arrows button:first-child {
+  margin-right: 30px;
+}
+
+.button-month-switcher {
+  background-color: transparent;
+  border-radius: 15%;
+  border-color: transparent;
+  vertical-align: top;
+}
+.button-month-switcher:hover {
+  background-color: rgb(221, 221, 221);
+}
+svg {
+  height: 100%;
+}
+
+.month-selector p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Числа */
+.calendar {
+  width: 416px;
+  height: 334px;
+  margin-top: 56px;
+}
+.weekday-item,
+.date-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-weekdays {
+  display: grid;
+  height: calc(100% / 7);
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: "mo tu we th fr sa su";
+}
+.calendar-dates {
+  display: grid;
+  height: calc(100% - (100% / 7));
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  color: #666666;
+}
+.outer-date {
+  color: #d4d4d4;
+}
+
+.current-data {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: #fb3f4a;
+  color: white;
+}

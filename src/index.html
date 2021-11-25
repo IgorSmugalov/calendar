@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<section class="calendar-container">
+	<div class="month-selector">
+		<div class="month"></div>
+		<div class="arrows">
+			<button class="button-month-switcher" onclick="prevMounth()">
+				<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.2843 1.00001L1.62744 6.65686L7.2843 12.3137" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</button>
+			<button class="button-month-switcher" onclick="nextMounth()">
+				<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.59803 1.00001L7.25488 6.65686L1.59803 12.3137" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</button>
+		</div>
+	</div>
+	<div class="calendar">
+		<div class="calendar-weekdays">
+			<div class="weekday-item">Пн</div>
+			<div class="weekday-item">Вт</div>
+			<div class="weekday-item">Ср</div>
+			<div class="weekday-item">Чт</div>
+			<div class="weekday-item">Пт</div>
+			<div class="weekday-item">Сб</div>
+			<div class="weekday-item">Вс</div>
+		</div>
+		<div class="calendar-dates" id="calendar">
+		</div>
+	</div>
+</section>
+
+</body>
+</html>
