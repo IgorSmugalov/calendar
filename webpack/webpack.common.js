@@ -6,7 +6,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 // Constants defines.
 const srcDir = path.resolve('./src');
-const distDir = path.resolve('./dist');
+const distDir = path.resolve('./docs');
 
 module.exports = (env, {
   sourceMap
