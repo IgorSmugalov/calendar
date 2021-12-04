@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E5E5E5;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* Рамки вокруг блоков */
+
+// div, button {
+// border: 1px solid black !important;
+// }
+
+.calendar {
+  width: 560px;
+  height: 563px;
+  padding: 72px;
+  border: 1px solid;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  &__month-selector {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__arrow {
+    background-color: transparent;
+    border-radius: 15%;
+    border-color: transparent;
+    vertical-align: top;
+
+    &--svg {
+      height: 100%;
+
+    }
+    &--preview {
+      margin-right: 15px;
+    }
+  }
+
+  &__date-output {
+    width: 416px;
+    height: 334px;
+    margin-top: 56px;
+  }
+
+  &__weekdays {
+    display: grid;
+    height: calc(100% / 7);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: "mo tu we th fr sa su";
+  }
+
+  &__weekdays-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dates-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  &__dates {
+    display: grid;
+    height: calc(100% - (100% / 7));
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  
+    &--outer-date {
+    }
+
+    &--current-data {
+    }
+
+    &--current-data-backlight {
+      height: 56px;
+      width: 56px;
+      border-radius: 50%;
+      position: fixed;
+      z-index: -1;
+
+    }
+  }
+}
+

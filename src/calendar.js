@@ -20,7 +20,7 @@ let globalCurrentMonth = new Date().getMonth();
 function printMonthAndYear(month, year) { // Выводит месяц и год на странице
 	let monthList = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 	let monthName = monthList[month];
-	let monthOutput = document.querySelector('.month');
+	let monthOutput = document.querySelector('.calendar__current-month');
 	monthOutput.innerText = `${monthName} ${year} `;
 };
 
@@ -29,7 +29,7 @@ function createCalendarGrid() { //создаеn сетку координат 7 
 	calendarDates.innerHTML = '';
 	for (let dayGrid = 1; dayGrid <= 7 * 6; dayGrid++) {
 		let date = document.createElement('div');
-		date.classList.add('date-item');
+		date.classList.add('calendar__dates-item');
 		date.setAttribute('id', `date${dayGrid}`);
 		calendarDates.append(date);
 	};
@@ -61,20 +61,25 @@ function fillCalendarVer2(month, year) {
 	let dateCoordinate = 1;
 	for (let dateOutput = calendarParameters.daysInPreviousMonth - calendarParameters.includedDaysFromPreviousMonth + 1; dateOutput <= calendarParameters.daysInPreviousMonth; dateOutput++) {
 		document.querySelector(`#date${dateCoordinate}`).append(dateOutput);
-		document.querySelector(`#date${dateCoordinate}`).classList.add('outer-date');
+		document.querySelector(`#date${dateCoordinate}`).classList.add('calendar__dates--outer-date');
 		dateCoordinate++;
 	}
 	for (let dateOutput = 1; dateOutput <= calendarParameters.daysInCurrentMonth; dateOutput++) {
 		document.querySelector(`#date${dateCoordinate}`).append(dateOutput);
 		if (dateOutput == currentDate.currentDate & month == currentDate.currentMonth & year == currentDate.currentYear) {
-			document.querySelector(`#date${dateCoordinate}`).classList.add('current-data');
+			document.querySelector(`#date${dateCoordinate}`).classList.add('calendar__dates--current-data');
+			let currentDateContainer = document.querySelector(`#date${dateCoordinate}`);
+			let currentDateBacklight = document.createElement('div');
+			currentDateBacklight.classList.add('calendar__dates--current-data-backlight');
+			currentDateContainer.append(currentDateBacklight);
+
 		}
 		calendarParameters.numWeekdayForFirstMonthDay++;
 		dateCoordinate++;
 	}
 	for (let dateOutput = 1; dateOutput <= calendarParameters.includedDaysFromNextMonth; dateOutput++) {
 		document.querySelector(`#date${dateCoordinate}`).append(dateOutput);
-		document.querySelector(`#date${dateCoordinate}`).classList.add('outer-date');
+		document.querySelector(`#date${dateCoordinate}`).classList.add('calendar__dates--outer-date');
 		dateCoordinate++;
 	}
 };
@@ -110,5 +115,8 @@ function prevMounth() { // Предыдущий месяц по кнопке <
 	CreateCalendar(globalCurrentMonth, globalCurrentYear);
 };
 
-window.nextMounth = nextMounth;
-window.prevMounth = prevMounth;
+const switchToNextMounth = document.querySelector('.calendar__arrow--next');
+switchToNextMounth.addEventListener('click', nextMounth);
+
+const switchToPreviewMounth = document.querySelector('.calendar__arrow--preview');
+switchToPreviewMounth.addEventListener('click', prevMounth);
