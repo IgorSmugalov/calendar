@@ -1,0 +1,116 @@
+
+.light-theme {
+    $theme-calendar-border-color: #ebebeb;
+    $theme-calendar-bg-color: #ffffff;
+    $theme-calendar-box-shadow: 0px 4px 32px #aaaaaa08;
+
+    $theme-calendar__month-selector-text-color: #333333;
+    $theme-calendar__arrow-hover: #aaaaaa;
+    $theme-calendar__arrow-svg-line-color: #333333;
+
+    $theme-calendar__weekdays-text-color: #333333;
+    $theme-calendar__dates-text-color: #666666;
+    $theme-calendar__dates--outer-date-text-color: #b6b6b6;
+    $theme-calendar__dates--current-data-background-color: #FB3F4A;
+    $theme-calendar__dates--current-data-text-color: #FFFFFF;
+
+    .calendar {
+        background-color: $theme-calendar-bg-color;
+        border-color: $theme-calendar-border-color;
+        box-shadow: $theme-calendar-box-shadow;
+    }
+    .calendar__month-selector {
+        color: $theme-calendar__month-selector-text-color;
+    }
+    .calendar__arrow:hover {
+        background-color: $theme-calendar__arrow-hover;
+    }
+    .calendar__arrow--svg path{
+        stroke: $theme-calendar__arrow-svg-line-color;
+    }
+    .calendar__weekdays {
+        color: $theme-calendar__weekdays-text-color;
+    }
+    .calendar__dates{
+        color: $theme-calendar__dates-text-color;
+    }
+    .calendar__dates--outer-date{
+        color: $theme-calendar__dates--outer-date-text-color;
+    }
+    .calendar__dates--current-data-backlight{
+        background-color: $theme-calendar__dates--current-data-background-color;
+    }
+    .calendar__dates--current-data{
+        color: $theme-calendar__dates--current-data-text-color;
+    }
+}
+
+.dark-theme {
+    $theme-calendar-border-color: #090A0C;
+    $theme-calendar-bg-color: #000000;
+    $theme-calendar-box-shadow: 0px 4px 32px #aaaaaa08;
+
+    $theme-calendar__month-selector-text-color: #FFFFFF;
+    $theme-calendar__arrow-hover: #363636;
+    $theme-calendar__arrow-svg-line-color: #FFFFFF;
+
+    $theme-calendar__weekdays-text-color: #FFFFFF;
+    $theme-calendar__dates-text-color: #CCCCCC;
+    $theme-calendar__dates--outer-date-text-color: #6d6d6d;
+    $theme-calendar__dates--current-data-background-color: #589C5F;
+    $theme-calendar__dates--current-data-text-color: #FFFFFF;
+
+    .calendar {
+        background-color: $theme-calendar-bg-color;
+        border-color: $theme-calendar-border-color;
+        box-shadow: $theme-calendar-box-shadow;
+    }
+    .calendar__month-selector {
+        color: $theme-calendar__month-selector-text-color;
+    }
+    .calendar__arrow:hover {
+        background-color: $theme-calendar__arrow-hover;
+    }
+    .calendar__arrow--svg path{
+        stroke: $theme-calendar__arrow-svg-line-color;
+    }
+    .calendar__weekdays {
+        color: $theme-calendar__weekdays-text-color;
+    }
+    .calendar__dates{
+        color: $theme-calendar__dates-text-color;
+    }
+    .calendar__dates--outer-date{
+        color: $theme-calendar__dates--outer-date-text-color;
+    }
+    .calendar__dates--current-data-backlight{
+        background-color: $theme-calendar__dates--current-data-background-color;
+    }
+    .calendar__dates--current-data{
+        color: $theme-calendar__dates--current-data-text-color;
+    }
+}
+
+
+
+/* ////////////////////////////// */
+
+.theme-switcher {
+    height: 50px;
+    width: 560px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.theme-switcher__button {
+    flex-grow: 0.3;
+    border-radius: 12px;
+    border-color: transparent;
+
+}
+
+.theme-switcher__button:hover {
+    background-color: #535353;
+}
+

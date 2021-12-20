@@ -20,6 +20,7 @@ body {
 // border: 1px solid black !important;
 // }
 
+
 .calendar {
   width: 560px;
   height: 563px;
@@ -86,17 +87,12 @@ body {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
   
-    &--outer-date {
-    }
-
-    &--current-data {
-    }
 
     &--current-data-backlight {
       height: 56px;
       width: 56px;
       border-radius: 50%;
-      position: fixed;
+      position: absolute;
       z-index: -1;
 
     }

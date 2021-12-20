@@ -2,35 +2,41 @@
 <html>
 <head>
 	<title></title>
-</head>
-<body>
+<link href="app.css" rel="stylesheet"></head>
+<body class="light-theme">
 
-<section class="calendar-container">
-	<div class="month-selector">
-		<div class="month"></div>
-		<div class="arrows">
-			<button class="button-month-switcher" onclick="prevMounth()">
-				<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.2843 1.00001L1.62744 6.65686L7.2843 12.3137" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<section class="calendar">
+	<div class="calendar__month-selector">
+		<div class="calendar__current-month"></div>
+		<div class="calendar__actions">
+			<button class="calendar__arrow calendar__arrow--preview">
+				<svg class="calendar__arrow--svg" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.2843 1.00001L1.62744 6.65686L7.2843 12.3137" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 			</button>
-			<button class="button-month-switcher" onclick="nextMounth()">
-				<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.59803 1.00001L7.25488 6.65686L1.59803 12.3137" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			<button class="calendar__arrow calendar__arrow--next">
+				<svg class="calendar__arrow--svg" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.59803 1.00001L7.25488 6.65686L1.59803 12.3137" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 			</button>
 		</div>
 	</div>
-	<div class="calendar">
-		<div class="calendar-weekdays">
-			<div class="weekday-item">Пн</div>
-			<div class="weekday-item">Вт</div>
-			<div class="weekday-item">Ср</div>
-			<div class="weekday-item">Чт</div>
-			<div class="weekday-item">Пт</div>
-			<div class="weekday-item">Сб</div>
-			<div class="weekday-item">Вс</div>
+	<div class="calendar__date-output">
+		<div class="calendar__weekdays">
+			<div class="calendar__weekdays-item">Пн</div>
+			<div class="calendar__weekdays-item">Вт</div>
+			<div class="calendar__weekdays-item">Ср</div>
+			<div class="calendar__weekdays-item">Чт</div>
+			<div class="calendar__weekdays-item">Пт</div>
+			<div class="calendar__weekdays-item">Сб</div>
+			<div class="calendar__weekdays-item">Вс</div>
 		</div>
-		<div class="calendar-dates" id="calendar">
+		<div class="calendar__dates" id="calendar">
+			<!-- <div class="calendar__dates-item" id="date1">1</div> <------- Пример строки с датой -->
 		</div>
+	</div>
+	<div class="calendar__theme-switcher">
 	</div>
 </section>
+<section class="theme-switcher">
+	<button class="theme-switcher__button">Переключить тему</button>
+</section>
 
-<script type="text/javascript" src="app.44c0606778591bff3ba2.js"></script></body>
+<script type="text/javascript" src="app.12dbd72277c12642a46b.js"></script></body>
 </html>
